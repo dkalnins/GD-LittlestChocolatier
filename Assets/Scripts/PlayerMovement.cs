@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        // since we are on the ground and not moving, we are idle
+        // since we are on the ground we are walking
         if (isGrounded)
         {
             _movementState = MovementState.Walking;
@@ -117,7 +117,6 @@ public class PlayerMovement : MonoBehaviour
         {
             _movementState = MovementState.Falling;
         }
-
     }
 
     private void UpdateFacing(float xController)
