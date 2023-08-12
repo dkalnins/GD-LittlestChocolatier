@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 148723345}
   - component: {fileID: 148723347}
   - component: {fileID: 148723346}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1092,7 +1092,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 565661640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.08, y: -1.66, z: 0}
+  m_LocalPosition: {x: -4.08, y: -1.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1134,7 +1134,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017363787, y: -0.13103676}
+  m_Offset: {x: -0.036883354, y: -0.12404227}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1145,7 +1145,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7168088, y: 0.9600682}
+  m_Size: {x: 0.73372316, y: 0.97405744}
   m_EdgeRadius: 0
 --- !u!114 &565661645
 MonoBehaviour:
@@ -1159,6 +1159,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481b3fda9e85e8a47ab95f075b33cd06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _jumpableLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!95 &565661646
 Animator:
   serializedVersion: 5
