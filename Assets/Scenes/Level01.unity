@@ -1159,9 +1159,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481b3fda9e85e8a47ab95f075b33cd06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _walkSpeed: 7
+  _jumpVelocity: 14
+  _xAxisZeroEquivalence: 0.001
   _jumpableLayer:
     serializedVersion: 2
     m_Bits: 64
+  _movementState: 0
 --- !u!95 &565661646
 Animator:
   serializedVersion: 5

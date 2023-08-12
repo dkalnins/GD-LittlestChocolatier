@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -8,17 +9,26 @@ using UnityEngine.Assertions;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(SpriteRenderer))]
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Player Physics")]
     [SerializeField] private float _walkSpeed = 7f;
     [SerializeField] private float _jumpVelocity = 12f;
 
+    [Header("Controller Sensitivity")]
+    [SerializeField] private float _xAxisZeroEquivalence = 0.001f;
+
     private Rigidbody2D _rigidBody;
     private Animator _animator;
     private BoxCollider2D _collider;
+    private SpriteRenderer _spriteRenderer;
 
     [SerializeField]private LayerMask _jumpableLayer;
+
+
+    private enum MovementState { Idle, Walking, Jumping, Falling };
+    [SerializeField] private MovementState _movementState;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +46,9 @@ public class PlayerMovement : MonoBehaviour
 
         _collider = GetComponent<BoxCollider2D>();
         Assert.IsNotNull(_collider);
+
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        Assert.IsNotNull(_spriteRenderer);
     }
 
 
@@ -50,40 +63,77 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.BoxCast(_collider.bounds.center, _collider.bounds.size, 0, Vector2.down, .1f, _jumpableLayer);
     }
 
+   
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        float xDirection = Input.GetAxisRaw("Horizontal");
-
-        _rigidBody.velocity = new Vector2(xDirection * _walkSpeed, _rigidBody.velocity.y);
-
-        if (IsGrounded())
-        {
-            HandleMovementControls(xDirection);
-        }
-
-
+        // in this game we can't chage direction in mid air
+        HandleMovementControls();
 
     }
 
-    private void HandleMovementControls(float xDirection)
+    private void HandleMovementControls()
     {
-        if (Input.GetButton("Jump"))
+        // use GetAxisRaw so there is no "drift"
+        float xControllerAxis = Input.GetAxisRaw("Horizontal");
+        bool isGrounded = IsGrounded();
+        bool jumpPressed = Input.GetButton("Jump");
+
+        // Adjust horizontal veloctiy. Note that direction can change (currently) while in the air
+        _rigidBody.velocity = new Vector2(xControllerAxis * _walkSpeed, _rigidBody.velocity.y);
+
+        UpdateFacing(xControllerAxis);
+        HandleMovementControls(isGrounded, xControllerAxis, jumpPressed);
+
+        PostAnimationState();        
+    }
+
+    private void HandleMovementControls(bool isGrounded, float xControllerAxis, bool jumpPressed)
+    {
+        // We can only jump if on the ground
+        if (jumpPressed && isGrounded)
         {
             _rigidBody.velocity = new Vector2(_rigidBody.velocity.x, _jumpVelocity);
+            _movementState = MovementState.Jumping;
+            return;
         }
 
-        if (xDirection >= 0.001f)
+        // if we are on the ground and not moving, then we must be idle
+        if (isGrounded && -_xAxisZeroEquivalence <= xControllerAxis && xControllerAxis <= _xAxisZeroEquivalence)
         {
-            _animator.SetBool("isWalking", true);
+            _movementState = MovementState.Idle;
+            return;
         }
-        else if (xDirection <= -0.001f)
+
+        // since we are on the ground and not moving, we are idle
+        if (isGrounded)
         {
-            _animator.SetBool("isWalking", true);
+            _movementState = MovementState.Walking;
+            return;
         }
-        else
+
+        // If we aren't grounded and our velocity is negative, then we are falling
+        if (_rigidBody.velocity.y <0)
         {
-            _animator.SetBool("isWalking", false);
+            _movementState = MovementState.Falling;
         }
+
+    }
+
+    private void UpdateFacing(float xController)
+    {
+        if (xController > _xAxisZeroEquivalence)
+        {
+            _spriteRenderer.flipX = true;
+        }
+        else if (xController < -_xAxisZeroEquivalence)
+        {
+            _spriteRenderer.flipX = false;
+        }
+    }
+
+    private void PostAnimationState()
+    {
+        _animator.SetInteger("AnimationState", (int)_movementState);
     }
 }

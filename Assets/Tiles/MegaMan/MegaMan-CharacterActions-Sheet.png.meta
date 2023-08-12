@@ -230,6 +230,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: MegaMan-CharacterActions-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 878bfa606f2db7a46ae4c1a5f6b76c15
+      internalID: -2016053089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -247,6 +268,7 @@ TextureImporter:
       MegaMan-CharacterActions-Sheet_3: -747944683
       MegaMan-CharacterActions-Sheet_4: -1735604840
       MegaMan-CharacterActions-Sheet_5: -1564946394
+      MegaMan-CharacterActions-Sheet_6: -2016053089
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
