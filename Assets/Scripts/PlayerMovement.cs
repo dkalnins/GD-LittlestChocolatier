@@ -79,9 +79,6 @@ public class PlayerMovement : MonoBehaviour
         bool isGrounded = IsGrounded();
         bool jumpPressed = Input.GetButton("Jump");
 
-        // Adjust horizontal veloctiy. Note that direction can change (currently) while in the air
-        _rigidBody.velocity = new Vector2(xControllerAxis * _walkSpeed, _rigidBody.velocity.y);
-
         UpdateFacing(xControllerAxis);
         HandleMovementControls(isGrounded, xControllerAxis, jumpPressed);
 
@@ -90,6 +87,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleMovementControls(bool isGrounded, float xControllerAxis, bool jumpPressed)
     {
+        // Adjust horizontal veloctiy. Note that direction can change (currently) while in the air
+        _rigidBody.velocity = new Vector2(xControllerAxis * _walkSpeed, _rigidBody.velocity.y);
+
         // We can only jump if on the ground
         if (jumpPressed && isGrounded)
         {
