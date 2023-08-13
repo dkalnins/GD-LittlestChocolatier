@@ -80,12 +80,12 @@ public class PlayerMovement : MonoBehaviour
         bool jumpPressed = Input.GetButton("Jump");
 
         UpdateFacing(xControllerAxis);
-        HandleMovementControls(isGrounded, xControllerAxis, jumpPressed);
+        UpdateVelocityAndAnimationState(isGrounded, xControllerAxis, jumpPressed);
 
         PostAnimationState();        
     }
 
-    private void HandleMovementControls(bool isGrounded, float xControllerAxis, bool jumpPressed)
+    private void UpdateVelocityAndAnimationState(bool isGrounded, float xControllerAxis, bool jumpPressed)
     {
         // Adjust horizontal veloctiy. Note that direction can change (currently) while in the air
         _rigidBody.velocity = new Vector2(xControllerAxis * _walkSpeed, _rigidBody.velocity.y);
