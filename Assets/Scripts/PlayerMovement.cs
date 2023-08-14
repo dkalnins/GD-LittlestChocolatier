@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]private LayerMask _jumpableLayer;
 
+    private bool _jumpButtonPressed = false;
+
 
     private enum MovementState { Idle, Walking, Jumping, Falling };
     [SerializeField] private MovementState _movementState;
@@ -63,8 +65,14 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.BoxCast(_collider.bounds.center, _collider.bounds.size, 0, Vector2.down, .1f, _jumpableLayer);
     }
 
-   
-    // Update is called once per frame
+    void Update()
+    {
+        // We want the player to press the jump button each time they want to jump, and not just be able to hold down
+        // the button/key. We record it here so we can handle other stuff in UpdateFixed(), rather  than every frame in Update()
+        if (!_jumpButtonPressed && Input.GetButtonDown("Jump"))
+            _jumpButtonPressed = true;
+    }
+
     void FixedUpdate()
     {
         // in this game we can't chage direction in mid air
@@ -77,7 +85,13 @@ public class PlayerMovement : MonoBehaviour
         // use GetAxisRaw so there is no "drift"
         float xControllerAxis = Input.GetAxisRaw("Horizontal");
         bool isGrounded = IsGrounded();
-        bool jumpPressed = Input.GetButton("Jump");
+        //bool jumpPressed = Input.GetButton("Jump");
+
+        // Use the button press captured in Update, if any
+        bool jumpPressed = _jumpButtonPressed;
+        if (_jumpButtonPressed)
+            _jumpButtonPressed = false;
+;
 
         UpdateFacing(xControllerAxis);
         UpdateVelocityAndAnimationState(isGrounded, xControllerAxis, jumpPressed);
