@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using TMPro.EditorUtilities;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -62,7 +63,24 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     bool IsGrounded()
     {
+        //TODO: If Grounded2() works, then this method and the _jumpableLayer might not be needed at all.
         return Physics2D.BoxCast(_collider.bounds.center, _collider.bounds.size, 0, Vector2.down, .1f, _jumpableLayer);
+    }
+
+    /// <summary>
+    /// This gound check uses boxcast, to create a thin box "just" below the player's collider. This box is then cast
+    /// "down" to see what it intersects.
+    /// </summary>
+    /// <returns></returns>
+    bool IsGrounded2()
+    {
+        float boxDelta = 0.01f;
+        float boxExtentY = 0.05f;
+
+        Vector2 boxCenter = new(_collider.bounds.center.x, _collider.bounds.center.y -_collider.bounds.extents.y - boxDelta - boxExtentY);
+        Vector2 boxSize = new(_collider.size.x, boxExtentY * 2);
+
+        return Physics2D.BoxCast(boxCenter, boxSize, 0, Vector2.down, .1f);
     }
 
     void Update()
@@ -85,7 +103,6 @@ public class PlayerMovement : MonoBehaviour
         // use GetAxisRaw so there is no "drift"
         float xControllerAxis = Input.GetAxisRaw("Horizontal");
         bool isGrounded = IsGrounded();
-        //bool jumpPressed = Input.GetButton("Jump");
 
         // Use the button press captured in Update, if any
         bool jumpPressed = _jumpButtonPressed;
