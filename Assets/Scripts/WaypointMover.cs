@@ -27,8 +27,6 @@ public class WaypointMover : MonoBehaviour
     {
 
         float distanceToTarget = Vector2.Distance(transform.position, _waypoints[_targetWaypoint].position);
-        Debug.Log(_targetWaypoint);
-        Debug.Log(_waypoints[_targetWaypoint]);
         //Debug.Log(transform.position);
 
         if (distanceToTarget < _arrivalProximity)

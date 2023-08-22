@@ -30,6 +30,10 @@ public class PlayerMovement : MonoBehaviour
     private bool _jumpButtonPressed = false;
 
 
+    private enum PlayerFacing { Left, Right };
+    private PlayerFacing _playerFacing = PlayerFacing.Right;
+
+
     private enum MovementState { Idle, Walking, Jumping, Falling };
     [SerializeField] private MovementState _movementState;
 
@@ -151,15 +155,25 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void FlipCharacter()
+    {
+        this.transform.localScale = new Vector3(this.transform.localScale.x * -1, this.transform.localScale.y, this.transform.localScale.z);
+
+    }
+
     private void UpdateFacing(float xController)
     {
-        if (xController > _xAxisZeroEquivalence)
+        if (xController > _xAxisZeroEquivalence && _playerFacing == PlayerFacing.Left)
         {
-            _spriteRenderer.flipX = true;
+            _playerFacing = PlayerFacing.Right;
+            FlipCharacter();
+            //_spriteRenderer.flipX = true;
         }
-        else if (xController < -_xAxisZeroEquivalence)
+        else if (xController < -_xAxisZeroEquivalence && _playerFacing == PlayerFacing.Right)
         {
-            _spriteRenderer.flipX = false;
+            _playerFacing = PlayerFacing.Left;
+            FlipCharacter();
+            //_spriteRenderer.flipX = false;
         }
     }
 

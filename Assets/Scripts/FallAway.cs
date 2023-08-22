@@ -10,7 +10,7 @@ public class FallAway : MonoBehaviour
 {
 
     [SerializeField] private float _secondsBeforeFall = 3f;
-    [SerializeField] private float _fallVelocity = 5f;
+    //[SerializeField] private float _fallVelocity = 5f;
     
     [SerializeField] private bool _startedTimer = false;
     [SerializeField] private bool _fallTriggered = false;
