@@ -4,7 +4,6 @@ using UnityEngine.Assertions;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(BoxCollider2D))]
-[RequireComponent(typeof(SpriteRenderer))]
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Player Physics")]
@@ -17,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _rigidBody;
     private Animator _animator;
     private BoxCollider2D _collider;
-    private SpriteRenderer _spriteRenderer;
 
     [SerializeField]private LayerMask _jumpableLayer;
 
@@ -53,9 +51,6 @@ public class PlayerMovement : MonoBehaviour
 
         _collider = GetComponent<BoxCollider2D>();
         Assert.IsNotNull(_collider);
-
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-        Assert.IsNotNull(_spriteRenderer);
     }
 
 
@@ -158,13 +153,11 @@ public class PlayerMovement : MonoBehaviour
         {
             _playerFacing = PlayerFacing.Right;
             FlipCharacter();
-            //_spriteRenderer.flipX = true;
         }
         else if (xController < -_xAxisZeroEquivalence && _playerFacing == PlayerFacing.Right)
         {
             _playerFacing = PlayerFacing.Left;
             FlipCharacter();
-            //_spriteRenderer.flipX = false;
         }
     }
 
