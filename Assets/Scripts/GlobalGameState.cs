@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 /// <summary>
 /// Contains information about whether the game is running or paused. This could be because
@@ -13,10 +14,14 @@ public static class GlobalGameState
 
     private static List<Rigidbody2D> _rigidbodiesToPause = new List<Rigidbody2D>();
 
+    private static float _oldTimeScale = 1f;
+
     public static void PauseGame()
     {
         _isPaused = true;
         PauseRigidbodies();
+
+        _oldTimeScale = Time.timeScale;
         Time.timeScale = 0;
     }
 
@@ -24,7 +29,7 @@ public static class GlobalGameState
     {
         _isPaused = false;
         UnpauseRigidbodies();
-        Time.timeScale = 1;
+        Time.timeScale = _oldTimeScale;
     }
 
     public static void RegisterRigidbody(Rigidbody2D rigidBody)
