@@ -10,7 +10,7 @@ public class DeadlyTouchHazard : MonoBehaviour
         if (!GetComponent<Collider2D>())
         {
             //Debug.Log("Could not find Collider2D in class " +  GetType().Name + " attached to " + gameObject.name);
-            Debug.Log($"Could not find Collider2D in class {GetType().Name}  attached to {gameObject.name}");
+            Debug.Log($"Could not find Collider2D in class {GetType().Name} attached to {gameObject.name}");
         }
     }
 

@@ -67,26 +67,10 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     bool IsGrounded()
     {
-        //TODO: If Grounded2() works, then this method and the _jumpableLayer might not be needed at all.
         return Physics2D.BoxCast(_collider.bounds.center, _collider.bounds.size, 0, Vector2.down, .1f, _jumpableLayer);
     }
 
-    /// <summary>
-    /// This gound check uses boxcast, to create a thin box "just" below the player's collider. This box is then cast
-    /// "down" to see what it intersects.
-    /// </summary>
-    /// <returns></returns>
-    bool IsGrounded2()
-    {
-        float boxDelta = 0.01f;
-        float boxExtentY = 0.05f;
-
-        Vector2 boxCenter = new(_collider.bounds.center.x, _collider.bounds.center.y -_collider.bounds.extents.y - boxDelta - boxExtentY);
-        Vector2 boxSize = new(_collider.size.x, boxExtentY * 2);
-
-        return Physics2D.BoxCast(boxCenter, boxSize, 0, Vector2.down, .1f);
-    }
-
+    
     void Update()
     {
         // We want the player to press the jump button each time they want to jump, and not just be able to hold down
@@ -155,6 +139,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Change the player's facing from left to right or right to left, depending on its previous state
+    /// </summary>
     private void FlipCharacter()
     {
         this.transform.localScale = new Vector3(this.transform.localScale.x * -1, this.transform.localScale.y, this.transform.localScale.z);
@@ -181,4 +168,5 @@ public class PlayerMovement : MonoBehaviour
     {
         _animator.SetInteger("AnimationState", (int)_movementState);
     }
+
 }
