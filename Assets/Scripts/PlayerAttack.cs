@@ -5,6 +5,14 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.Assertions;
 
+/// <summary>
+/// Handles controller input for attacks, delays before and after attacks, targetting
+/// and then calls relevant damage functions on hit targets.
+/// 
+/// _attackLocation needs to a transform that is a child of the Player, which indicates where
+/// the attack will be centred from. It raidiates out as a circle from there using the supplied
+/// radius.
+/// </summary>
 [RequireComponent(typeof(Animator))]
 public class PlayerAttack : MonoBehaviour
 {
@@ -25,7 +33,6 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField, Header("Show Attack Area")]
     GizmoDebug _gizmoDebug = GizmoDebug.none;
 
-    // Start is called before the first frame update
     void Start()
     {
         if (_attackLocation == null)

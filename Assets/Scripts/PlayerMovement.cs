@@ -1,6 +1,12 @@
 using UnityEngine;
 using UnityEngine.Assertions;
 
+
+/// <summary>
+/// Covers off contoller and keyboard input and translates them into player movement.
+/// 
+/// Tracks the different move mode the player is in and updates the animator accordingly
+/// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(BoxCollider2D))]
@@ -39,9 +45,10 @@ public class PlayerMovement : MonoBehaviour
     private void BindComponentVariables()
     {
 
-        // TODO rationalize the way that all the error checking is handled across classes. Some use
+        //TODO rationalize the way that all the error checking is handled across classes. Some use
         // Assert and others just used Debug.Log(...). Answer: Use Assert for objects that are required
         // as specified by RequireComponent, and Debug.Log messages when the object is not filled (dragged in)
+        // add this to a documentation file
 
         _rigidBody = GetComponent<Rigidbody2D>();
         Assert.IsNotNull(_rigidBody);
@@ -131,7 +138,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // If we aren't grounded and our velocity is negative, then we are falling
-        // TODO: probably want some kind of drift control here, in case the controller doesn't zero properly
+        //TODO probably want some kind of drift control here, in case the controller doesn't zero properly
         if (_rigidBody.velocity.y < 0)
         {
             _movementState = MovementState.Falling;
@@ -139,14 +146,20 @@ public class PlayerMovement : MonoBehaviour
     }
 
     /// <summary>
-    /// Change the player's facing from left to right or right to left, depending on its previous state
+    /// Change the player's facing from left to right or right to left, depending on its previous state.
+    /// 
+    /// Note that the attack system assumes that player flipping is done using this trick of multiplying
+    /// the x-axis by -1, so that the attack target also flips, since its a child of the Player object
     /// </summary>
     private void FlipCharacter()
     {
         this.transform.localScale = new Vector3(this.transform.localScale.x * -1, this.transform.localScale.y, this.transform.localScale.z);
-
     }
 
+    /// <summary>
+    /// Updates the facing of the player based on the direction the controller is pointing.
+    /// </summary>
+    /// <param name="xController">x-axis value from the input manager</param>
     private void UpdateFacing(float xController)
     {
         if (xController > _xAxisZeroEquivalence && _playerFacing == PlayerFacing.Left)
@@ -161,6 +174,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Push the current animation state to the Animator attached the player
+    /// </summary>
     private void PostAnimationState()
     {
         _animator.SetInteger("AnimationState", (int)_movementState);

@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeadlyTouchHazard : MonoBehaviour
+/// <summary>
+/// Hazards and mobiles that damage the player. Currently health system is a single hit vanquish
+/// </summary>
+public class DamageOnTouchHazard : MonoBehaviour
 {
-
     private void Start()
     {
         if (!GetComponent<Collider2D>())
