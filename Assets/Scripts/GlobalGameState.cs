@@ -11,37 +11,37 @@ public static class GlobalGameState
     public static Boolean IsPaused { get => _isPaused; }
     private static Boolean _isPaused = false;
 
-    private static List<Rigidbody2D> _rigidBodiesToPause = new List<Rigidbody2D>();
+    private static List<Rigidbody2D> _rigidbodiesToPause = new List<Rigidbody2D>();
 
     public static void PauseGame()
     {
         _isPaused = true;
-        PauseRigidBodies();
+        PauseRigidbodies();
         Time.timeScale = 0;
     }
 
     public static void UnpauseGame()
     {
         _isPaused = false;
-        UnpauseRigidBodies();
+        UnpauseRigidbodies();
         Time.timeScale = 1;
     }
 
-    public static void RegisterRigidBody(Rigidbody2D rigidBody)
+    public static void RegisterRigidbody(Rigidbody2D rigidBody)
     {
-        _rigidBodiesToPause.Add(rigidBody);
+        _rigidbodiesToPause.Add(rigidBody);
     }
 
-    private static void PauseRigidBodies()
+    private static void PauseRigidbodies()
     {
-        foreach(Rigidbody2D body in _rigidBodiesToPause)
+        foreach(Rigidbody2D body in _rigidbodiesToPause)
         {
             body.simulated = false;
         }
     }
-    private static void UnpauseRigidBodies()
+    private static void UnpauseRigidbodies()
     {
-        foreach (Rigidbody2D body in _rigidBodiesToPause)
+        foreach (Rigidbody2D body in _rigidbodiesToPause)
         {
             body.simulated = true;
         }

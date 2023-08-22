@@ -10,8 +10,7 @@ public class FallAway : MonoBehaviour
 {
 
     [SerializeField] private float _secondsBeforeFall = 3f;
-    //[SerializeField] private float _fallVelocity = 5f;
-    
+   
     [SerializeField] private bool _startedTimer = false;
     [SerializeField] private bool _fallTriggered = false;
 
@@ -19,14 +18,12 @@ public class FallAway : MonoBehaviour
 
     private Rigidbody2D _rigidBody;
 
-    // Start is called before the first frame update
     void Start()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
         Assert.IsNotNull(_rigidBody);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (_startedTimer)
