@@ -138,7 +138,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // If we aren't grounded and our velocity is negative, then we are falling
-        //TODO probably want some kind of drift control here, in case the controller doesn't zero properly
         if (_rigidBody.velocity.y < 0)
         {
             _movementState = MovementState.Falling;
