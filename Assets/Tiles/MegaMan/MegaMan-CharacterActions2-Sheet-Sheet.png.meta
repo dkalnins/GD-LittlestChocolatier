@@ -112,8 +112,8 @@ TextureImporter:
         y: 0
         width: 34
         height: 34
-      alignment: 9
-      pivot: {x: 0.615, y: 0.482}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -133,8 +133,8 @@ TextureImporter:
         y: 0
         width: 34
         height: 34
-      alignment: 9
-      pivot: {x: 0.615, y: 0.482}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,8 +154,8 @@ TextureImporter:
         y: 0
         width: 34
         height: 34
-      alignment: 9
-      pivot: {x: 0.615, y: 0.482}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,8 +175,8 @@ TextureImporter:
         y: 0
         width: 34
         height: 34
-      alignment: 9
-      pivot: {x: 0.615, y: 0.482}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -196,8 +196,8 @@ TextureImporter:
         y: 0
         width: 34
         height: 34
-      alignment: 9
-      pivot: {x: 0.615, y: 0.482}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,8 +217,8 @@ TextureImporter:
         y: 0
         width: 34
         height: 34
-      alignment: 9
-      pivot: {x: 0.615, y: 0.482}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -238,8 +238,8 @@ TextureImporter:
         y: 0
         width: 34
         height: 34
-      alignment: 9
-      pivot: {x: 0.615, y: 0.482}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -259,8 +259,8 @@ TextureImporter:
         y: 0
         width: 34
         height: 34
-      alignment: 9
-      pivot: {x: 0.615, y: 0.482}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -268,6 +268,27 @@ TextureImporter:
       bones: []
       spriteID: b49672f664fa11f42ba2bb7a298c3b9b
       internalID: 1644069769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MegaMan-CharacterActions2-Sheet-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d62c5e3b596db3c4388739d2f80e5a12
+      internalID: -907346260
       vertices: []
       indices: 
       edges: []
@@ -291,6 +312,7 @@ TextureImporter:
       MegaMan-CharacterActions2-Sheet-Sheet_5: -1611313141
       MegaMan-CharacterActions2-Sheet-Sheet_6: -1644707117
       MegaMan-CharacterActions2-Sheet-Sheet_7: 1644069769
+      MegaMan-CharacterActions2-Sheet-Sheet_8: -907346260
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

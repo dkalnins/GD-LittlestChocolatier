@@ -25,9 +25,15 @@ public class WaypointMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GlobalGameState.IsPaused)
+            return;
 
+        Move();
+    }
+
+    private void Move()
+    {
         float distanceToTarget = Vector2.Distance(transform.position, _waypoints[_targetWaypoint].position);
-        //Debug.Log(transform.position);
 
         if (distanceToTarget < _arrivalProximity)
         {

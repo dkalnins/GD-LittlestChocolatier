@@ -23,10 +23,13 @@ public class FireHazard : MonoBehaviour
         PushAnimationStatus();
     }
 
-    private void Update()
-    {
-        PushAnimationStatus();
-    }
+    //private void Update()
+    //{
+    //    if (GlobalGameState.IsPaused)
+    //        return;
+
+    //    // might add some code here to "Awaken" the fire when the player gets close
+    //}
 
     public void ToggleAwakeStatus()
     {

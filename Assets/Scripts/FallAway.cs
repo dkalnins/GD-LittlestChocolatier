@@ -35,6 +35,10 @@ public class FallAway : MonoBehaviour
 
     private void HandleTimer()
     {
+        // Timers are paused if the game is paused
+        if (GlobalGameState.IsPaused)
+            return;
+
         _fallTimer += Time.deltaTime;
         if (_fallTimer >= _secondsBeforeFall)
         {

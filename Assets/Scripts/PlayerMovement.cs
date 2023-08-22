@@ -1,9 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using TMPro.EditorUtilities;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -41,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         BindComponentVariables();
+        GlobalGameState.RegisterRigidBody(_rigidBody);
     }
 
     private void BindComponentVariables()
@@ -70,9 +65,12 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.BoxCast(_collider.bounds.center, _collider.bounds.size, 0, Vector2.down, .1f, _jumpableLayer);
     }
 
-    
+
     void Update()
     {
+        if (GlobalGameState.IsPaused)
+            return;
+
         // We want the player to press the jump button each time they want to jump, and not just be able to hold down
         // the button/key. We record it here so we can handle other stuff in UpdateFixed(), rather  than every frame in Update()
         if (!_jumpButtonPressed && Input.GetButtonDown("Jump"))
@@ -81,9 +79,10 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // in this game we can't chage direction in mid air
-        HandleMovementControls();
+        if (GlobalGameState.IsPaused)
+            return;
 
+        HandleMovementControls();
     }
 
     private void HandleMovementControls()

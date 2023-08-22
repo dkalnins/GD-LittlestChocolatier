@@ -34,11 +34,13 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
+        if (GlobalGameState.IsPaused)
+            return;
+
         if (Input.GetButtonDown("Attack") && !_isAttacking)
         {
             Attack();
-        }
-
+        }   
     }
 
     private void Attack()
