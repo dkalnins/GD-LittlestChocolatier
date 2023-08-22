@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -8,10 +9,14 @@ using UnityEngine.Assertions;
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] Transform _attackLocation;
+    [SerializeField] LayerMask _targetLayerMask;
 
     [SerializeField] private float _attackRange = .2f;
     [SerializeField] private float _timeBeforeSwing = .2f;
     [SerializeField] private float _attackCooldown = .2f;
+
+    private float _timer = 0f;
+    private bool _beforeSwing = true;
 
     private bool _isAttacking = false;
     private Animator _animator;
@@ -28,6 +33,11 @@ public class PlayerAttack : MonoBehaviour
             Debug.Log($"Could not find AttackLocation in class {GetType().Name} attached to {gameObject.name}");
         }
 
+        if (_targetLayerMask == 0)
+        {
+            Debug.Log($"TargetLayerMask not specified in class {GetType().Name} attached to {gameObject.name}");
+        }
+
         _animator = GetComponent<Animator>();
         Assert.IsNotNull(_animator);
     }
@@ -37,23 +47,61 @@ public class PlayerAttack : MonoBehaviour
         if (GlobalGameState.IsPaused)
             return;
 
-        if (Input.GetButtonDown("Attack") && !_isAttacking)
-        {
-            Attack();
-        }   
+        if (_isAttacking)
+            ContinueAttack();
+        else if (Input.GetButtonDown("Attack"))
+            StartAttack();
+
     }
 
-    private void Attack()
+    /// <summary>
+    /// We are in the middle of an attack, either before the actual strike because there is a time delay
+    /// after the button press, or after the actual swing during the cooldown.
+    /// </summary>
+    private void ContinueAttack()
     {
-        Debug.Log("Start Attack");
+        _timer += Time.deltaTime;
+        if (_beforeSwing)
+        {
+            if (_timer >= _timeBeforeSwing)
+            {
+                DoStrike();
+                _timer = 0f;
+                _beforeSwing = false;
+            }
+        }
+        else // after swing
+        {
+            if (_timer >= _attackCooldown)
+            {
+                // cooldown is over, so the player may attack again
+                _timer = 0f;
+                _beforeSwing = true;
+                _isAttacking = false;
+            }
+        }
+    }
 
+    private void DoStrike()
+    {
+        // Lets see if we hit anything (must be in layer _targetLayerMask)
+        Collider2D[] hits = Physics2D.OverlapCircleAll(_attackLocation.position, _attackRange, _targetLayerMask);
+
+        foreach (Collider2D hit in hits)
+        {
+            Debug.Log("a hit!");
+        }
+    }
+
+    private void StartAttack()
+    {
         // Start attack animation
         _animator.SetTrigger("StartAttack");
+        _isAttacking = true;
 
-        // see if we hit any enemies
-
-
-        // apply damage
+        // setup timer that checks to see when swing occurs
+        _timer = 0;
+        _beforeSwing = true;
     }
 
     private void OnDrawGizmosSelected()
@@ -64,7 +112,7 @@ public class PlayerAttack : MonoBehaviour
         /// Draw the circle where the attack occurs for calibration purposes
         if (_attackLocation != null)
         {
-            Gizmos.color = Color.yellow;
+            Gizmos.color = Color.magenta;
 
             Gizmos.DrawWireSphere(_attackLocation.position, _attackRange);
         }
@@ -78,7 +126,7 @@ public class PlayerAttack : MonoBehaviour
         /// Draw the circle where the attack occurs for calibration purposes
         if (_attackLocation != null)
         {
-            Gizmos.color = Color.yellow;
+            Gizmos.color = Color.magenta;
 
             Gizmos.DrawWireSphere(_attackLocation.position, _attackRange);
         }

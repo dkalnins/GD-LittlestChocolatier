@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 6241050155806718029}
   - component: {fileID: 6241050155806718128}
   - component: {fileID: 6241050155806718031}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mashmellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
