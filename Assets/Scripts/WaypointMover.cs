@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Jobs;
-using UnityEngine.UIElements;
 
 /// <summary>
 /// Move the attached object between a set of points. Points are added in the unity editor and are
