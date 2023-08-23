@@ -15,9 +15,11 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] Transform _attackLocation;
     [SerializeField] LayerMask _targetLayerMask;
 
-    [SerializeField] private float _attackRange = .2f;
-    [SerializeField] private float _timeBeforeSwing = .2f;
-    [SerializeField] private float _attackCooldown = .2f;
+    [SerializeField] private float _attackRange = .3f;
+    [SerializeField] private float _timeBeforeSwing = .1f;
+    [SerializeField] private float _attackCooldown = .3f;
+
+    [SerializeField] private int _damagePerAttack = 35;
 
     private float _timer = 0f;
     private bool _beforeSwing = true;
@@ -92,7 +94,14 @@ public class PlayerAttack : MonoBehaviour
 
         foreach (Collider2D hit in hits)
         {
-            Debug.Log("a hit!");
+            EnemyHealth enemyHealth = hit.GetComponent<EnemyHealth>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.ApplyDamage(_damagePerAttack);
+            }
+            else
+                Debug.Log("Found an emey in the enemy target layer, but it doesn't seem to have EnemyHealth");
+
         }
     }
 
