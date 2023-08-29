@@ -22,8 +22,11 @@ public class WaypointMover : MonoBehaviour
     int _targetWaypoint = 0;
     float _arrivalProximity = 0.1f;
 
+    WaypointFlipper _waypointFlipper;
+
     private void Start()
     {
+        _waypointFlipper = GetComponent<WaypointFlipper>();
         Debug.Assert(_waypoints.Length > 0);
     }
 
@@ -48,6 +51,9 @@ public class WaypointMover : MonoBehaviour
             if (_targetWaypoint >= _waypoints.Length)
                 _targetWaypoint = 0;
         }
+
+        if (_waypointFlipper != null)
+            _waypointFlipper.InformXDirection(_waypoints[_targetWaypoint].position.x - transform.position.x);
 
         transform.position = Vector2.MoveTowards(transform.position, _waypoints[_targetWaypoint].position, _speed * Time.deltaTime);
     }

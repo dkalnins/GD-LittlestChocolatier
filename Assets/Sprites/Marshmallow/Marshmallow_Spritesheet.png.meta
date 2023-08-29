@@ -1,0 +1,651 @@
+fileFormatVersion: 2
+guid: bf6327b1c8c824547a67559ca275e3f6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd9a59b9c10c3a4aa5d05e7e21f1905
+      internalID: 804846567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1200.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e8d8263a8bf4e43a99ae5427d9ed89
+      internalID: -151580138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1200.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0edd249a3fd324f84cc4c0b8313ecd
+      internalID: -698973892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1200.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcaf6dd9c66cb534c9ef0da5af7d992a
+      internalID: -2105591067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1200.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6478682fb75a884baa3e410ed8fb5c8
+      internalID: -256646014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1200.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ce678d6d60e8d4e8ae78393f139d3e
+      internalID: -537726803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687863bacf2afe54d94a8e430afdd924
+      internalID: -1045766389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 800.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d37b3bc64c740c4dac2fada35add981
+      internalID: 731099342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 800.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75154655de05b654e8262ebce0c378c7
+      internalID: 45252558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 800.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33680a25f0005814db586a92286f4294
+      internalID: -1578247229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 800.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4bbaca29031eeb42a13e507bc84589e
+      internalID: -1406249956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 800.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10f0fd3d3544de468503f079d18bed9
+      internalID: 1554292280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a18a6218c8dd9243ab6dd8c17e9e63b
+      internalID: 1552494609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df08c3f323b26d0468fd46080f38b3dd
+      internalID: -1698153947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 400.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f4c8e94ad62a24ca886b0becccbc72
+      internalID: 2106731722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 400.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4acb8220443202f49b32dca4f054b13e
+      internalID: -2011030054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 400.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a499f33475b2d54686771ce122b0061
+      internalID: 1438552842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 400.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4bf2b9e3a11ed644960c58fdcfa2ad1
+      internalID: -1889149464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4187bced0ec425449b031e824e6d7cf
+      internalID: 422726338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9f61a77674b6740a9494acd1bfb515
+      internalID: -642165739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e83b9d46993a82429ae835b01ef3f6f
+      internalID: 754090639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd062e7630cfb2439ea82c193787df7
+      internalID: -768674240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db144bfa934efc47bacba90e36a733a
+      internalID: 528978341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marshmallow_Spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0.75
+        width: 400
+        height: 400.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f99e37b15f5454d871e3ae731a71ae
+      internalID: 327114745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Marshmallow_Spritesheet_0: 804846567
+      Marshmallow_Spritesheet_1: -151580138
+      Marshmallow_Spritesheet_10: -1406249956
+      Marshmallow_Spritesheet_11: 1554292280
+      Marshmallow_Spritesheet_12: 1552494609
+      Marshmallow_Spritesheet_13: -1698153947
+      Marshmallow_Spritesheet_14: 2106731722
+      Marshmallow_Spritesheet_15: -2011030054
+      Marshmallow_Spritesheet_16: 1438552842
+      Marshmallow_Spritesheet_17: -1889149464
+      Marshmallow_Spritesheet_18: 422726338
+      Marshmallow_Spritesheet_19: -642165739
+      Marshmallow_Spritesheet_2: -698973892
+      Marshmallow_Spritesheet_20: 754090639
+      Marshmallow_Spritesheet_21: -768674240
+      Marshmallow_Spritesheet_22: 528978341
+      Marshmallow_Spritesheet_23: 327114745
+      Marshmallow_Spritesheet_3: -2105591067
+      Marshmallow_Spritesheet_4: -256646014
+      Marshmallow_Spritesheet_5: -537726803
+      Marshmallow_Spritesheet_6: -1045766389
+      Marshmallow_Spritesheet_7: 731099342
+      Marshmallow_Spritesheet_8: 45252558
+      Marshmallow_Spritesheet_9: -1578247229
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
