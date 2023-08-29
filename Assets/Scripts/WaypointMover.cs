@@ -32,7 +32,7 @@ public class WaypointMover : MonoBehaviour
 
     void Update()
     {
-        if (GlobalGameState.IsPaused)
+        if (GlobalGameState.Instance.IsPaused)
             return;
 
         Move();

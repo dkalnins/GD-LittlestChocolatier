@@ -15,7 +15,7 @@ public class DamageOnTouchHazard : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (GlobalGameState.IsPaused)
+        if (GlobalGameState.Instance.IsPaused)
             return;
 
         if (collision.gameObject.CompareTag("Player"))

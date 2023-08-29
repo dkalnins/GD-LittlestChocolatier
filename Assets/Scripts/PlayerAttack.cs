@@ -49,7 +49,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        if (GlobalGameState.IsPaused)
+        if (GlobalGameState.Instance.IsPaused)
             return;
 
         if (_isAttacking)

@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         BindComponentVariables();
-        GlobalGameState.RegisterRigidbody(_rigidBody);
+        GlobalGameState.Instance.RegisterRigidbody(_rigidBody);
     }
 
     private void BindComponentVariables()
@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (GlobalGameState.IsPaused)
+        if (GlobalGameState.Instance.IsPaused)
             return;
 
         // We want the player to press the jump button each time they want to jump, and not just be able to hold down
@@ -86,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (GlobalGameState.IsPaused)
+        if (GlobalGameState.Instance.IsPaused)
             return;
 
         HandleMovementControls();

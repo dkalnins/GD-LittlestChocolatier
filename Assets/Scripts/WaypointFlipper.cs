@@ -34,7 +34,6 @@ public class WaypointFlipper : MonoBehaviour
         {
             _currentFacing = _newFacing;
             this.transform.localScale = new Vector3(this.transform.localScale.x * -1, this.transform.localScale.y, this.transform.localScale.z);
-//            Debug.Log("Sprite Flip now");
         }
 
     }
