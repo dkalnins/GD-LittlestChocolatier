@@ -100,7 +100,7 @@ public class PlayerAttack : MonoBehaviour
                 enemyHealth.ApplyDamage(_damagePerAttack);
             }
             else
-                Debug.Log("Found an emey in the enemy target layer, but it doesn't seem to have EnemyHealth");
+                Debug.Log("Found an enemy in the enemy target layer, but it doesn't seem to have EnemyHealth");
 
         }
     }

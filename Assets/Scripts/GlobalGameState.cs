@@ -21,8 +21,11 @@ public class GlobalGameState : MonoBehaviour
 
     private bool _isMenuOpen = false;
 
-    // TODO - get this working with multiple scenes
-    private readonly List<Rigidbody2D> _rigidbodiesToPause = new();
+    // TODO - get this working with multiple scenes. Probably just need to reset the bodies, like we did with restarting
+    private List<Rigidbody2D> _rigidbodiesToPause = new();
+
+    // TODO - we probably don't actually need to keep this array. There is probably some way to disable all physics. Oops! Yes - turning the time scale off is enough
+
 
     private float _oldTimeScale = 1f;
 
@@ -33,6 +36,9 @@ public class GlobalGameState : MonoBehaviour
     private GameObject _menuPrefab = null;
     private GameObject _menu = null;
     private MenuController _menuController = null;
+
+    private bool _playerVanquished = false;
+
 
     private static GlobalGameState _instance;
     public static GlobalGameState Instance
@@ -51,12 +57,48 @@ public class GlobalGameState : MonoBehaviour
 
     private void Update()
     {
-        if (!_isMenuOpen && Input.GetKeyDown(KeyCode.Escape))
+        if (_isMenuOpen)
+            return;
+
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             _isMenuOpen = true;
-            PauseGame();
-            OpenPauseMenu();
+            if (_playerVanquished)
+            {
+                OpenPopupMenu(MenuController.MenuState.Vanquished);
+            }
+            else
+            {
+                PauseGame();
+                OpenPopupMenu(MenuController.MenuState.Pause);
+            }
         }
+
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void ResumeGame()
+    {
+        UnpauseGame();
+    }
+
+    public void ResetGameAndStart()
+    {
+        _playerVanquished = false;
+        _isPaused = false;
+        Time.timeScale = _oldTimeScale;
+        _isMenuOpen = false;
+        _rigidbodiesToPause = new();
+        SceneManager.LoadScene(1);
+    }
+
+    public void PlayerVanquished()
+    {
+        _playerVanquished = true;
+        PauseGame();
     }
 
     private void Awake()
@@ -68,22 +110,20 @@ public class GlobalGameState : MonoBehaviour
     }
 
 
-    public void PauseGame()
+    private void PauseGame()
     {
         _isPaused = true;
         PauseRigidbodies();
-
         _oldTimeScale = Time.timeScale;
         Time.timeScale = 0;
     }
 
-
-    public void UnpauseGame()
+    private void UnpauseGame()
     {
         _isPaused = false;
         UnpauseRigidbodies();
         Time.timeScale = _oldTimeScale;
-        _isMenuOpen = false;  // TODO feels liks this should be set explicitly somewhere else
+        _isMenuOpen = false;
     }
 
     public void RegisterRigidbody(Rigidbody2D rigidBody)
@@ -109,7 +149,7 @@ public class GlobalGameState : MonoBehaviour
 
     // TODO this Pause menu feels pretty gross. Think about fixing it in some way.
     // TODO the names of the different components need to be fixed up at the very least
-    private void OpenPauseMenu()
+    private void OpenPopupMenu(MenuController.MenuState menuType)
     {
         if (!_canvasPrefab)
         {
@@ -143,7 +183,7 @@ public class GlobalGameState : MonoBehaviour
             Assert.IsNotNull(_menuController);
         }
 
-        _menuController.SetMenuType(MenuController.MenuState.Pause);
+        _menuController.SetMenuType(menuType);
         _menu.SetActive(true);
 
     }

@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
     }
     public void Damage()
     {
-        _animator.SetTrigger("PlayerVanquished");        
-        GlobalGameState.Instance.PauseGame();
+        _animator.SetTrigger("PlayerVanquished");   
+        GlobalGameState.Instance.PlayerVanquished();
     }
 }

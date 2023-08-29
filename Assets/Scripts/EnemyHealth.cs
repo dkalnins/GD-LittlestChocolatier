@@ -34,14 +34,13 @@ public class EnemyHealth : MonoBehaviour
     private void HandleVanquished()
     {
         // TODO Animation transition to vanquished?
-        //Debug.Log("Need an animation transition here");
         if (_animator)
         {
             _animator.SetBool("EnemyVanquished", true);
         }
         else
         {
-            // TODO remove temporary code to handle vanquish
+            // If we don't have an animator
             transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
         }
 

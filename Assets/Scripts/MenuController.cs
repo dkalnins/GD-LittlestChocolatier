@@ -26,17 +26,21 @@ public class MenuController : MonoBehaviour
         if (_menuState == MenuState.Pause)
         {
             gameObject.SetActive(false);
-            GlobalGameState.Instance.UnpauseGame();
+            GlobalGameState.Instance.ResumeGame();
+        }
+        else if (_menuState == MenuState.Vanquished)
+        {
+            GlobalGameState.Instance.ResetGameAndStart();
         }
         else
         {
-            SceneManager.LoadScene(1);
+            GlobalGameState.Instance.StartGame();
         }
     }
 
     public void ResetClicked()
     {
-        Debug.Log("ResetClicked()");
+        GlobalGameState.Instance.ResetGameAndStart();
     }
 
 
@@ -50,8 +54,6 @@ public class MenuController : MonoBehaviour
 
     public void SetMenuType(MenuState state)
     {
-        Debug.Log("Inside SetMenuType " + ((int)state).ToString());
-
         switch (state)
         {
             case MenuState.Main:
