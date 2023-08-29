@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using System.Xml.Schema;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -15,6 +16,7 @@ public class WaypointFlipper : MonoBehaviour
     
     [SerializeField] private MovementDirection _normalFacing = MovementDirection.Left;
     private MovementDirection _currentFacing;
+
 
     private void Start()
     {

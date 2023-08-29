@@ -1,17 +1,18 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] int _maxHealth = 100;
     int _currentHealth;
 
+    Animator _animator;
+
     private void Start()
     {
         _currentHealth = _maxHealth;
+
+        _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -33,16 +34,23 @@ public class EnemyHealth : MonoBehaviour
     private void HandleVanquished()
     {
         // TODO Animation transition to vanquished?
-        Debug.Log("Need an animation transition here");
+        //Debug.Log("Need an animation transition here");
+        if (_animator)
+        {
+            _animator.SetBool("EnemyVanquished", true);
+        }
+        else
+        {
+            // TODO remove temporary code to handle vanquish
+            transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
+        }
 
         this.enabled = false;
         GetComponent<Collider2D>().enabled = false;
+
         WaypointMover waypointMover = GetComponent<WaypointMover>();
         if (waypointMover != null)
             waypointMover.enabled = false;
-        
-        // temporary substitute for animation
-        transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
 
     }
 }
