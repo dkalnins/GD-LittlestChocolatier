@@ -107,6 +107,8 @@ public class GlobalGameState : MonoBehaviour
     }
 
 
+    // TODO this Pause menu feels pretty gross. Think about fixing it in some way.
+    // TODO the names of the different components need to be fixed up at the very least
     private void OpenPauseMenu()
     {
         if (!_canvasPrefab)
@@ -124,7 +126,6 @@ public class GlobalGameState : MonoBehaviour
             _canvasComponent = _canvasParent.GetComponent<Canvas>();
             Assert.IsNotNull(_canvasComponent);
         }
-
 
         if (!_menuPrefab)
         {
