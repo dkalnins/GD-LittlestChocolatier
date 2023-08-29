@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
-public class Menu : MonoBehaviour
+public class MenuController : MonoBehaviour
 {
     public enum MenuState { Main, Pause, Vanquished};
     MenuState _menuState = MenuState.Main;
@@ -23,8 +23,15 @@ public class Menu : MonoBehaviour
 
     public void StartClicked()
     {
-        Debug.Log("StartClicked()");
-        SceneManager.LoadScene(1);
+        if (_menuState == MenuState.Pause)
+        {
+            gameObject.SetActive(false);
+            GlobalGameState.Instance.UnpauseGame();
+        }
+        else
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 
     public void ResetClicked()

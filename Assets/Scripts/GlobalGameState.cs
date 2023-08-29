@@ -32,6 +32,7 @@ public class GlobalGameState : MonoBehaviour
 
     private GameObject _menuPrefab = null;
     private GameObject _menu = null;
+    private MenuController _menuController = null;
 
     private static GlobalGameState _instance;
     public static GlobalGameState Instance
@@ -82,6 +83,7 @@ public class GlobalGameState : MonoBehaviour
         _isPaused = false;
         UnpauseRigidbodies();
         Time.timeScale = _oldTimeScale;
+        _isMenuOpen = false;  // TODO feels liks this should be set explicitly somewhere else
     }
 
     public void RegisterRigidbody(Rigidbody2D rigidBody)
@@ -134,10 +136,14 @@ public class GlobalGameState : MonoBehaviour
             _menu = Instantiate(_menuPrefab, _canvasComponent.transform);
             Assert.IsNotNull(_menu);
         }
+        if (!_menuController)
+        {
+            _menuController = _menu.GetComponent<MenuController>();
+            Assert.IsNotNull(_menuController);
+        }
 
-        Debug.Log("Set menu active");
+        _menuController.SetMenuType(MenuController.MenuState.Pause);
         _menu.SetActive(true);
-        Debug.Log("Set menu active finished");
 
     }
 
