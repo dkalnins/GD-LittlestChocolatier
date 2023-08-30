@@ -30,7 +30,7 @@ public class MenuController : MonoBehaviour
         }
         else if (_menuState == MenuState.Vanquished)
         {
-            GlobalGameState.Instance.ResetGameAndStart();
+            GlobalGameState.Instance.ResetAndStartGame();
         }
         else
         {
@@ -40,12 +40,13 @@ public class MenuController : MonoBehaviour
 
     public void ResetClicked()
     {
-        GlobalGameState.Instance.ResetGameAndStart();
+        GlobalGameState.Instance.ResetAndStartGame();
     }
 
 
     public void QuitClicked()
     {
+        // TODO ask player for confirmation before quitting here
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #endif

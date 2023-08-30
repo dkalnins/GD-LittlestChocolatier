@@ -8,16 +8,14 @@ using UnityEngine.SceneManagement;
 /// The pause menu is open, the game is over, ending animation is playing or some new condition.
 /// 
 /// This is a singleton object, which does not require a GameObject. It creates itself when
-/// Instance is first referenced via the Instance property
+/// Instance is first referenced via the Instance property - i.e. lazy instantiation
 /// </summary>
 public class GlobalGameState : MonoBehaviour
 {
-    public bool IsPaused { get => _isPaused; }
-    [SerializeField] private Boolean _isPaused = false;
+    public bool IsPaused { get => (_isMenuOpen || _isPlayerVanquished); }
 
+    private bool _isPlayerVanquished = false;
     private bool _isMenuOpen = false;
-
-    private float _oldTimeScale = 1f;
 
     private GameObject _canvasPrefab = null;
     private GameObject _canvasParent = null;
@@ -25,11 +23,10 @@ public class GlobalGameState : MonoBehaviour
 
     private GameObject _menuPrefab = null;
     private GameObject _menu = null;
+
     private MenuController _menuController = null;
 
-    private bool _playerVanquished = false;
-
-
+    // Code to instantiate Singleton.
     private static GlobalGameState _instance;
     public static GlobalGameState Instance
     {
@@ -53,17 +50,11 @@ public class GlobalGameState : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             _isMenuOpen = true;
-            if (_playerVanquished)
-            {
+            if (_isPlayerVanquished)
                 OpenPopupMenu(MenuController.MenuState.Vanquished);
-            }
             else
-            {
-                PauseGame();
                 OpenPopupMenu(MenuController.MenuState.Pause);
-            }
         }
-
     }
 
     public void StartGame()
@@ -72,22 +63,21 @@ public class GlobalGameState : MonoBehaviour
     }
     public void ResumeGame()
     {
-        UnpauseGame();
+        StartTime();
     }
 
-    public void ResetGameAndStart()
+    public void ResetAndStartGame()
     {
-        _playerVanquished = false;
-        _isPaused = false;
-        Time.timeScale = _oldTimeScale;
+        _isPlayerVanquished = false;
         _isMenuOpen = false;
-        SceneManager.LoadScene(1);
+        StartTime();
+        StartGame();
     }
 
     public void PlayerVanquished()
     {
-        _playerVanquished = true;
-        PauseGame();
+        _isPlayerVanquished = true;
+        StopTime();
     }
 
     private void Awake()
@@ -99,17 +89,14 @@ public class GlobalGameState : MonoBehaviour
     }
 
 
-    private void PauseGame()
+    private void StopTime()
     {
-        _isPaused = true;
-        _oldTimeScale = Time.timeScale;
         Time.timeScale = 0;
     }
 
-    private void UnpauseGame()
+    private void StartTime()
     {
-        _isPaused = false;
-        Time.timeScale = _oldTimeScale;
+        Time.timeScale = 1f;
         _isMenuOpen = false;
     }
 
@@ -150,6 +137,8 @@ public class GlobalGameState : MonoBehaviour
             Assert.IsNotNull(_menuController);
         }
 
+        StopTime();
+        _isMenuOpen = true;
         _menuController.SetMenuType(menuType);
         _menu.SetActive(true);
 
