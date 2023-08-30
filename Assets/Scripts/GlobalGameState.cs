@@ -1,11 +1,7 @@
 using System;
-using System.Collections.Generic;
-using TMPro.EditorUtilities;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 /// <summary>
 /// Contains information about whether the game is running or paused. This could be because
@@ -20,12 +16,6 @@ public class GlobalGameState : MonoBehaviour
     [SerializeField] private Boolean _isPaused = false;
 
     private bool _isMenuOpen = false;
-
-    // TODO - get this working with multiple scenes. Probably just need to reset the bodies, like we did with restarting
-    private List<Rigidbody2D> _rigidbodiesToPause = new();
-
-    // TODO - we probably don't actually need to keep this array. There is probably some way to disable all physics. Oops! Yes - turning the time scale off is enough
-
 
     private float _oldTimeScale = 1f;
 
@@ -91,7 +81,6 @@ public class GlobalGameState : MonoBehaviour
         _isPaused = false;
         Time.timeScale = _oldTimeScale;
         _isMenuOpen = false;
-        _rigidbodiesToPause = new();
         SceneManager.LoadScene(1);
     }
 
@@ -113,7 +102,6 @@ public class GlobalGameState : MonoBehaviour
     private void PauseGame()
     {
         _isPaused = true;
-        PauseRigidbodies();
         _oldTimeScale = Time.timeScale;
         Time.timeScale = 0;
     }
@@ -121,29 +109,8 @@ public class GlobalGameState : MonoBehaviour
     private void UnpauseGame()
     {
         _isPaused = false;
-        UnpauseRigidbodies();
         Time.timeScale = _oldTimeScale;
         _isMenuOpen = false;
-    }
-
-    public void RegisterRigidbody(Rigidbody2D rigidBody)
-    {
-        _rigidbodiesToPause.Add(rigidBody);
-    }
-
-    private void PauseRigidbodies()
-    {
-        foreach (Rigidbody2D body in _rigidbodiesToPause)
-        {
-            body.simulated = false;
-        }
-    }
-    private void UnpauseRigidbodies()
-    {
-        foreach (Rigidbody2D body in _rigidbodiesToPause)
-        {
-            body.simulated = true;
-        }
     }
 
 

@@ -39,7 +39,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         BindComponentVariables();
-        GlobalGameState.Instance.RegisterRigidbody(_rigidBody);
     }
 
     private void BindComponentVariables()
