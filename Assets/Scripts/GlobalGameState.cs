@@ -89,7 +89,6 @@ public class GlobalGameState : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-
     private void OpenPopupMenu(MenuController.MenuState menuType)
     {
         StopTime();

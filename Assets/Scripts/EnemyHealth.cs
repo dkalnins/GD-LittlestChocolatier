@@ -1,6 +1,11 @@
 using UnityEngine;
 using UnityEngine.Assertions;
 
+/// <summary>
+/// Tracks enemy health, damage, and when to convert into a vanquished state
+/// 
+/// Also applies animations
+/// </summary>
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] int _maxHealth = 100;
@@ -27,8 +32,7 @@ public class EnemyHealth : MonoBehaviour
         {
             Debug.Log($"{GetType().Name} now has health {_currentHealth}");
             // TODO Apply Injured animation
-        }
-        
+        }        
     }
 
     private void HandleVanquished()

@@ -5,10 +5,13 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 /// <summary>
-/// Used with WaypointMover to horizontally flip the graphics horizontally based on the direction
+/// Used with WaypointMover to horizontally flip the graphics based on the direction
 /// the object is moving.
 /// 
 /// Place this on the same object as the WaypointMover
+/// 
+/// Note: This script does not know the "normal" direction for an object to face, so this
+/// might need to be toggled by settingf the _normalFacing parameter in the inspector.
 /// </summary>
 public class WaypointFlipper : MonoBehaviour
 {

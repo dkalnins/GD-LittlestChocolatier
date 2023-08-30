@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
+/// <summary>
+/// This singleton loads and assembles the PopUpMenu from Prefabs and manages
+/// its state and activation/deactivation.
+/// 
+/// There is no logic embedded in her about what the buttons do or mean.
+/// </summary>
 public class PopUpMenu : MonoBehaviour
 {
     private bool _isShowing = false;

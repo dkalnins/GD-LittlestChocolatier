@@ -20,6 +20,8 @@ public class FireHazard : MonoBehaviour
         PushAnimationStatus();
     }
 
+
+    //TODO consider adding code to make the fire "wake up"
     //private void Update()
     //{
     //    if (GlobalGameState.IsPaused)

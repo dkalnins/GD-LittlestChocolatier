@@ -3,7 +3,7 @@ using UnityEngine.Assertions;
 
 
 /// <summary>
-/// Class used to implement experimental falling platform segments - no finished but does work!
+/// Class used to implement experimental falling platform segments - no finished but does work... kind of!
 /// </summary>
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
