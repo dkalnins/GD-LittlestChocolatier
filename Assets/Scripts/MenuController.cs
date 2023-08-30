@@ -4,6 +4,11 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
+// TODO rename this class - MenuFunctions? Controller isnt accurate
+//
+// This script gets used to control the main menu on the Menu scene, as well
+// as the PopUp menu in-game.
+//
 public class MenuController : MonoBehaviour
 {
     public enum MenuState { Main, Pause, Vanquished};
@@ -21,15 +26,21 @@ public class MenuController : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// This method is activated from the first button on the Menu. This button has different states
+    /// based on how its called. It can be called from the Main menu in scene 0, as well as
+    /// from the pop-up menu.
+    /// </summary>
     public void StartClicked()
     {
         if (_menuState == MenuState.Pause)
         {
-            gameObject.SetActive(false);
+            PopUpMenu.Instance.ClosePopupMenu();
             GlobalGameState.Instance.ResumeGame();
         }
         else if (_menuState == MenuState.Vanquished)
         {
+            PopUpMenu.Instance.ClosePopupMenu();
             GlobalGameState.Instance.ResetAndStartGame();
         }
         else
@@ -40,6 +51,7 @@ public class MenuController : MonoBehaviour
 
     public void ResetClicked()
     {
+        PopUpMenu.Instance.ClosePopupMenu();
         GlobalGameState.Instance.ResetAndStartGame();
     }
 
