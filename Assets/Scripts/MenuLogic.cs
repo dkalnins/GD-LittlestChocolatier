@@ -49,6 +49,15 @@ public class MenuLogic : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && _menuState == MenuState.Pause && PopUpMenu.Instance.IsShowing)
+        {
+            PopUpMenu.Instance.ClosePopupMenu();
+            GlobalGameState.Instance.ResumeGame();
+        }
+    }
+
     public void ResetClicked()
     {
         PopUpMenu.Instance.ClosePopupMenu();
