@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -21,7 +22,7 @@ public class PopUpMenu : MonoBehaviour
     private Canvas _canvasComponent = null;
     private GameObject _pauseMenu = null;
 
-    private MenuController _menuController = null;
+    private MenuLogic _menuController = null;
 
     private static PopUpMenu _instance;
     public static PopUpMenu Instance
@@ -40,7 +41,15 @@ public class PopUpMenu : MonoBehaviour
         }
     }
 
-    public void OpenPopupMenu(MenuController.MenuState menuType)
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+            Destroy(_instance);
+        else
+            _instance = this;
+    }
+
+    public void OpenPopupMenu(MenuLogic.MenuState menuType)
     {
         _isShowing = true;
         _menuController.SetMenuType(menuType);
@@ -94,7 +103,7 @@ public class PopUpMenu : MonoBehaviour
         }
         if (!_menuController)
         {
-            _menuController = _pauseMenu.GetComponent<MenuController>();
+            _menuController = _pauseMenu.GetComponent<MenuLogic>();
             Assert.IsNotNull(_menuController);
         }
     }

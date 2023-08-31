@@ -4,16 +4,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
-// TODO rename this class - MenuLogic or MenuFunctions? the word controller isnt accurate
-//
-// This script gets used to control the main menu on the Menu scene, as well
-// as the PopUp menu in-game.
-//
 /// <summary>
-/// This class contains the methods that can be called from button clicks. It essentially
+/// This class contains the
+/// methods that can be called from button clicks. It essentially
 /// implements the logic of the menu as it pertains to the actual game.
 /// </summary>
-public class MenuController : MonoBehaviour
+public class MenuLogic : MonoBehaviour
 {
     public enum MenuState { Main, Pause, Vanquished};
     MenuState _menuState = MenuState.Main;

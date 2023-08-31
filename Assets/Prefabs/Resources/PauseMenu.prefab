@@ -674,7 +674,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8869815478032460663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1676fa29561538f4a8e063adc26b68b5, type: 3}
+  m_Script: {fileID: 11500000, guid: 014e606431ef1dc46970ec5509db44c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _startResumeButtonText: {fileID: 8869815477101975614}

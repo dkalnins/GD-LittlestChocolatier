@@ -20,7 +20,6 @@ public class EnemyHealth : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     public void ApplyDamage(int damage)
     {
         _currentHealth -= damage;
@@ -37,7 +36,6 @@ public class EnemyHealth : MonoBehaviour
 
     private void HandleVanquished()
     {
-        // TODO Animation transition to vanquished?
         if (_animator)
         {
             _animator.SetBool("EnemyVanquished", true);

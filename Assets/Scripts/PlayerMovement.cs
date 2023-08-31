@@ -43,12 +43,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void BindComponentVariables()
     {
-
-        //TODO rationalize the way that all the error checking is handled across classes. Some use
-        // Assert and others just used Debug.Log(...). Answer: Use Assert for objects that are required
-        // as specified by RequireComponent, and Debug.Log messages when the object is not filled (dragged in)
-        // add this to a documentation file
-
         _rigidBody = GetComponent<Rigidbody2D>();
         Assert.IsNotNull(_rigidBody);
 

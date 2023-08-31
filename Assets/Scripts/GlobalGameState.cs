@@ -32,6 +32,14 @@ public class GlobalGameState : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+            Destroy(_instance);
+        else
+            _instance = this;
+    }
+
     private void Update()
     {
         if (PopUpMenu.Instance.IsShowing)
@@ -40,9 +48,9 @@ public class GlobalGameState : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (_isPlayerVanquished)
-                OpenPopupMenu(MenuController.MenuState.Vanquished);
+                OpenPopupMenu(MenuLogic.MenuState.Vanquished);
             else
-                OpenPopupMenu(MenuController.MenuState.Pause);
+                OpenPopupMenu(MenuLogic.MenuState.Pause);
         }
     }
 
@@ -68,17 +76,6 @@ public class GlobalGameState : MonoBehaviour
         StopTime();
     }
 
-    // TODO - see if this is needed. Also test since we haven't tested since the Singleton aspects of this class were 
-    // rewritten. Ideally we want to make sure that nobody can drag one of these scripts directly onto an object in the
-    // game editor.
-    private void Awake()
-    {
-        if (_instance != null && _instance != this)
-            Destroy(_instance);
-        else
-            _instance = this;
-    }
-
     private void StopTime()
     {
         Time.timeScale = 0;
@@ -89,7 +86,7 @@ public class GlobalGameState : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    private void OpenPopupMenu(MenuController.MenuState menuType)
+    private void OpenPopupMenu(MenuLogic.MenuState menuType)
     {
         StopTime();
         PopUpMenu.Instance.OpenPopupMenu(menuType);
