@@ -30,7 +30,6 @@ public class EnemyHealth : MonoBehaviour
         else
         {
             Debug.Log($"{GetType().Name} now has health {_currentHealth}");
-            // TODO Apply Injured animation
         }        
     }
 
@@ -42,7 +41,7 @@ public class EnemyHealth : MonoBehaviour
         }
         else
         {
-            // If we don't have an animator
+            // Flip the vanquished target if we don't have an animator
             transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
         }
 

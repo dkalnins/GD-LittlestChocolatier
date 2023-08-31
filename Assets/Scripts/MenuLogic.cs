@@ -67,11 +67,7 @@ public class MenuLogic : MonoBehaviour
 
     public void QuitClicked()
     {
-        // TODO ask player for confirmation before quitting here
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#endif
-        Application.Quit();
+        GlobalGameState.EndGame();
     }
 
     public void SetMenuType(MenuState state)

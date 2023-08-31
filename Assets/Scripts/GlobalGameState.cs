@@ -15,6 +15,8 @@ public class GlobalGameState : MonoBehaviour
     public bool IsPaused { get => (_isPlayerVanquished || PopUpMenu.Instance.IsShowing); }
 
     private bool _isPlayerVanquished = false;
+    private int _currentLevel = 1;
+    private int _lastLevel = 2;
 
     // Code to instantiate Singleton.
     private static GlobalGameState _instance;
@@ -56,6 +58,7 @@ public class GlobalGameState : MonoBehaviour
 
     public void StartGame()
     {
+        _currentLevel = 1;
         SceneManager.LoadScene(1);
     }
     public void ResumeGame()
@@ -68,6 +71,19 @@ public class GlobalGameState : MonoBehaviour
         _isPlayerVanquished = false;
         StartTime();
         StartGame();
+    }
+
+    public void NextLevel()
+    {
+        _currentLevel++;
+        if (_currentLevel > _lastLevel)
+        {
+            EndGame();
+        }
+        else
+        {
+            SceneManager.LoadScene(_currentLevel);
+        }
     }
 
     public void PlayerVanquished()
@@ -90,5 +106,13 @@ public class GlobalGameState : MonoBehaviour
     {
         StopTime();
         PopUpMenu.Instance.OpenPopupMenu(menuType);
+    }
+
+    internal static void EndGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        Application.Quit();
     }
 }
