@@ -1,7 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// Added to the player so that if the player lands on it, they stick to it. USed
+/// Added to the player so that if the player lands on it, they stick to it. Used
 /// for moving platforms, but could be extended to allow mobs on it too
 /// </summary>
 public class StickyTrigger : MonoBehaviour

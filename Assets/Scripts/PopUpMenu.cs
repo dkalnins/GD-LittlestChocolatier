@@ -9,6 +9,9 @@ using UnityEngine.Assertions;
 /// its state and activation/deactivation.
 /// 
 /// There is no logic embedded in her about what the buttons do or mean.
+/// 
+/// The canvas is loaded and defined separately in case the scene already has a
+/// canvas, in which case the existing one is used first.
 /// </summary>
 public class PopUpMenu : MonoBehaviour
 {
@@ -23,6 +26,7 @@ public class PopUpMenu : MonoBehaviour
     private GameObject _pauseMenu = null;
 
     private MenuLogic _menuController = null;
+
 
     private static PopUpMenu _instance;
     public static PopUpMenu Instance
@@ -66,6 +70,7 @@ public class PopUpMenu : MonoBehaviour
     {
         LoadPrefabs();
         InstantiateMenu();
+
         DontDestroyOnLoad(_canvasGameObject);
     }
 
@@ -83,6 +88,8 @@ public class PopUpMenu : MonoBehaviour
         }
     }
 
+    // TODO the idea behind defining the canvas seaparetly to the menu is to
+    // use an existing canvas if there is one, but this case is not tested.
     private void InstantiateMenu()
     {
         if (!_canvasGameObject)

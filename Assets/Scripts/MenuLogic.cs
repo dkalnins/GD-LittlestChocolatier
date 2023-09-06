@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 
 /// <summary>
-/// This class contains the
-/// methods that can be called from button clicks. It essentially
-/// implements the logic of the menu as it pertains to the actual game.
+/// This class contains the methods that can be called from button clicks.
+/// It essentially implements the logic of the menu as in *this* game, but the
+/// PopUpMenu class is a singleton and nearly standalone.
 /// </summary>
 public class MenuLogic : MonoBehaviour
 {

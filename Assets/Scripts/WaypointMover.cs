@@ -4,7 +4,7 @@ using UnityEngine;
 /// Move the attached object between a set of points. Points are added in the unity editor and are
 /// visited in a rotating sequence.
 /// 
-/// If there are more than 2 tarets and a non-rotating order is needed, then points can be added
+/// If there are more than 2 targets and a non-rotating order is needed, then points can be added
 /// into the loop multiple times. e.g. A, B, C, B this would then loop back and forth between three
 /// locations.
 /// 
@@ -48,6 +48,7 @@ public class WaypointMover : MonoBehaviour
         if (distanceToTarget < _arrivalProximity)
         {
             _targetWaypoint++;
+            // TODO use modulo trick here, and test
             if (_targetWaypoint >= _waypoints.Length)
                 _targetWaypoint = 0;
         }
