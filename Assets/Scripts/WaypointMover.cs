@@ -22,20 +22,49 @@ public class WaypointMover : MonoBehaviour
     int _targetWaypoint = 0;
     float _arrivalProximity = 0.1f;
 
+    [SerializeField]
+    float _pauseDuration = 0;
+
     WaypointFlipper _waypointFlipper;
+    Animator _animator;
 
     private void Start()
     {
         _waypointFlipper = GetComponent<WaypointFlipper>();
+        _animator = GetComponent<Animator>();
+
         Debug.Assert(_waypoints.Length > 0);
     }
 
     void Update()
     {
-        if (GlobalGameState.Instance.IsPaused)
+        if (_pauseDuration > 0)
+        {
+            _pauseDuration -= Time.deltaTime;
+            if (_pauseDuration <= 0 )
+            {
+                if (_animator)
+                    _animator.speed = 1;
+            }
+        }
+
+        if (GlobalGameState.Instance.IsPaused || _pauseDuration > 0)
             return;
 
         Move();
+    }
+
+    public void PauseFor(float pauseDuration)
+    {
+        // don't allow Enemies to be stun locked
+        if (_pauseDuration <= 0)
+            _pauseDuration = pauseDuration;
+    }
+
+    public void CancelPause()
+    {
+        _pauseDuration = 0;
+        _animator.speed = 1;
     }
 
     private void Move()
@@ -48,9 +77,7 @@ public class WaypointMover : MonoBehaviour
         if (distanceToTarget < _arrivalProximity)
         {
             _targetWaypoint++;
-            // TODO use modulo trick here, and test
-            if (_targetWaypoint >= _waypoints.Length)
-                _targetWaypoint = 0;
+            _targetWaypoint %= _waypoints.Length;
         }
 
         if (_waypointFlipper != null)

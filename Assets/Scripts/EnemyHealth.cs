@@ -10,14 +10,17 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] int _maxHealth = 100;
     int _currentHealth;
+    [SerializeField] float _stunDuration = .3f;
 
     Animator _animator;
+    WaypointMover _waypointMover;
 
     private void Start()
     {
         _currentHealth = _maxHealth;
 
         _animator = GetComponent<Animator>();
+        _waypointMover = GetComponent<WaypointMover>();
     }
 
     public void ApplyDamage(int damage)
@@ -29,12 +32,22 @@ public class EnemyHealth : MonoBehaviour
         }
         else
         {
-            Debug.Log($"{GetType().Name} now has health {_currentHealth}");
+            //Debug.Log($"{GetType().Name} now has health {_currentHealth}");
+            if (_waypointMover)
+            {
+                _waypointMover.PauseFor(_stunDuration);
+                if (_animator)
+                    _animator.speed = 0;
+            }
+            
         }        
     }
 
     private void HandleVanquished()
     {
+        if (_waypointMover)
+            _waypointMover.CancelPause();
+
         if (_animator)
         {
             _animator.SetBool("EnemyVanquished", true);

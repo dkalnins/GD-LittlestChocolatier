@@ -20,7 +20,6 @@ public class WaypointFlipper : MonoBehaviour
     [SerializeField] private MovementDirection _normalFacing = MovementDirection.Left;
     private MovementDirection _currentFacing;
 
-
     private void Start()
     {
         _currentFacing = _normalFacing;
