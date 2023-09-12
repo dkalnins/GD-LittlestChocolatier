@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -103,8 +104,11 @@ public class PlayerAttack : MonoBehaviour
                 Debug.Log("Found an enemy in the enemy target layer, but it doesn't seem to have EnemyHealth");
 
         }
+
+        DebugGizmos.Instance.RegisterNewDebugGizmo(_attackLocation.position, _attackRange - 0.01f, 2f);
     }
 
+    
     private void StartAttack()
     {
         // Start attack animation

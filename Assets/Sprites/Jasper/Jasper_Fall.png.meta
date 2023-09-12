@@ -1,0 +1,651 @@
+fileFormatVersion: 2
+guid: e0d5cbe512b515245b60f7f316a74b7d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jasper_Fall_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed1917cf75e91747a74948fb3d21e99
+      internalID: 1381637812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_1
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1600
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c65230e70bf57e458d389375b93c4a1
+      internalID: -1701132901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_2
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1600
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0840d68ff759fbb4eba037eee929e84c
+      internalID: -1885666441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_3
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 1600
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60390ae73d4594844b2e3ff70b7a2ce8
+      internalID: -459527847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_4
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1600
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30b148463be88343b60616276b0d3b6
+      internalID: 1868413610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c994220b39201214191da5c505b714a0
+      internalID: 900839338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_6
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1200
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9165c27e61d4118448237c140cf63bf7
+      internalID: 1680925783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_7
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1200
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb51cfc1312e35c4eb18803e6f3a8bf6
+      internalID: -525978305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_8
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 1200
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f0b939ffcda77d41b2d9750e44ee28a
+      internalID: -183668076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_9
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1200
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67a3a0359d97714294e0eb8f0bc8b62
+      internalID: -394933969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bef7b9958a781a429e85c9d518b69ee
+      internalID: 1823345800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_11
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 800
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 212089fe3bc3638429e5016dff5a4c0f
+      internalID: -638864684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_12
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 800
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4253033ce02b414ca7557fa69c97389
+      internalID: -578688070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_13
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 800
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32bbb52accac6924489437724cb2ed77
+      internalID: 543593419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_14
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 800
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d2e30d5196a554daf6de9206e16d7b
+      internalID: -1918581925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbbb5d7c3c169b04d96d5d6adbf640c5
+      internalID: 332109371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_16
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 400
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bbc301d9aef01e4aaf2dd7f560fd53e
+      internalID: -542553236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_17
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 400
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbbf5716071c51e4d8ed1857fbb8d8f5
+      internalID: 592328925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_18
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 400
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8251bbeafce3f4393607624dfeb807
+      internalID: -1311016353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_19
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 400
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d45839d3cc881c54496c3fc17b76da67
+      internalID: -1030771258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733a4789c7c80344eb6792506a6da034
+      internalID: -1013750697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_21
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 0
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d9a6e67b91112c4ba58195a8308f065
+      internalID: -100001690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_22
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 0
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e839d39cf0fa504ca28244ca934443c
+      internalID: -818006310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Fall_23
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 0
+        width: 399.6
+        height: 400
+      alignment: 9
+      pivot: {x: 0.3961231, y: 0.5819263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7df6dee3488eb4cbf409b400556e0a
+      internalID: -478170252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Jasper_Fall_0: 1381637812
+      Jasper_Fall_1: -1701132901
+      Jasper_Fall_10: 1823345800
+      Jasper_Fall_11: -638864684
+      Jasper_Fall_12: -578688070
+      Jasper_Fall_13: 543593419
+      Jasper_Fall_14: -1918581925
+      Jasper_Fall_15: 332109371
+      Jasper_Fall_16: -542553236
+      Jasper_Fall_17: 592328925
+      Jasper_Fall_18: -1311016353
+      Jasper_Fall_19: -1030771258
+      Jasper_Fall_2: -1885666441
+      Jasper_Fall_20: -1013750697
+      Jasper_Fall_21: -100001690
+      Jasper_Fall_22: -818006310
+      Jasper_Fall_23: -478170252
+      Jasper_Fall_3: -459527847
+      Jasper_Fall_4: 1868413610
+      Jasper_Fall_5: 900839338
+      Jasper_Fall_6: 1680925783
+      Jasper_Fall_7: -525978305
+      Jasper_Fall_8: -183668076
+      Jasper_Fall_9: -394933969
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
