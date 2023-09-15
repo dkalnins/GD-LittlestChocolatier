@@ -90,7 +90,7 @@ public class GlobalGameState : MonoBehaviour
     {
         _isPlayerVanquished = true;
         StopTime();
-        PopUpMenu.Instance.OpenAfterDelay(4f);
+        PopUpMenu.Instance.OpenAfterDelay(2.5f);
     }
 
     private void StopTime()

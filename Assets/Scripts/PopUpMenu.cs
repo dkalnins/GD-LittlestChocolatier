@@ -132,16 +132,12 @@ public class PopUpMenu : MonoBehaviour
 
     private IEnumerator CountDown(float countDown)
     {
-        while (countDown > 0)
-        {
-            yield return new WaitForSeconds(1);
-            countDown--;
-        }
+        yield return new WaitForSecondsRealtime(countDown);
 
         if (_popupAfterDelay)
         {
             _popupAfterDelay = false;
-            OpenPopupMenu(MenuLogic.MenuState.Pause);
+            OpenPopupMenu(MenuLogic.MenuState.Vanquished);
         }
     }
 }

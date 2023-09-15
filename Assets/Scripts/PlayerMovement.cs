@@ -89,7 +89,6 @@ public class PlayerMovement : MonoBehaviour
     {
         // use GetAxisRaw so there is no "drift"
         float xControllerAxis = Input.GetAxisRaw("Horizontal");
-        bool isGrounded = IsGrounded();
 
         // Use the button press captured in Update, if any
         bool jumpPressed = _jumpButtonPressed;
@@ -98,13 +97,15 @@ public class PlayerMovement : MonoBehaviour
 ;
 
         UpdateFacing(xControllerAxis);
-        UpdateVelocityAndAnimationState(isGrounded, xControllerAxis, jumpPressed);
+        UpdateVelocityAndAnimationState(xControllerAxis, jumpPressed);
 
         PostAnimationState();        
     }
 
-    private void UpdateVelocityAndAnimationState(bool isGrounded, float xControllerAxis, bool jumpPressed)
+    private void UpdateVelocityAndAnimationState(float xControllerAxis, bool jumpPressed)
     {
+        bool isGrounded = IsGrounded();
+
         // Adjust horizontal veloctiy. Note that direction can change (currently) while in the air
         _rigidBody.velocity = new Vector2(xControllerAxis * _walkSpeed, _rigidBody.velocity.y);
 
