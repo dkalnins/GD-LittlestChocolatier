@@ -16,7 +16,7 @@ public class GlobalGameState : MonoBehaviour
 
     private bool _isPlayerVanquished = false;
     private int _currentLevel = 1;
-    private int _lastLevel = 2;
+    private int _lastLevel = 4;
 
     // Code to instantiate Singleton.
     private static GlobalGameState _instance;
@@ -90,6 +90,7 @@ public class GlobalGameState : MonoBehaviour
     {
         _isPlayerVanquished = true;
         StopTime();
+        PopUpMenu.Instance.OpenAfterDelay(4f);
     }
 
     private void StopTime()

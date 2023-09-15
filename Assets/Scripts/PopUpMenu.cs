@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -26,6 +27,8 @@ public class PopUpMenu : MonoBehaviour
     private GameObject _pauseMenu = null;
 
     private MenuLogic _menuController = null;
+
+    private bool _popupAfterDelay = false;
 
 
     private static PopUpMenu _instance;
@@ -56,6 +59,7 @@ public class PopUpMenu : MonoBehaviour
     public void OpenPopupMenu(MenuLogic.MenuState menuType)
     {
         _isShowing = true;
+        _popupAfterDelay = false; // in case the player hits escape while the counter is ticking
         _menuController.SetMenuType(menuType);
         _pauseMenu.SetActive(true);
     }
@@ -112,6 +116,32 @@ public class PopUpMenu : MonoBehaviour
         {
             _menuController = _pauseMenu.GetComponent<MenuLogic>();
             Assert.IsNotNull(_menuController);
+        }
+    }
+
+    /// <summary>
+    /// This method gets called when the game is paused because of player death. After the specified
+    /// time 
+    /// </summary>
+    /// <exception cref="NotImplementedException"></exception>
+    public void OpenAfterDelay(float delay)
+    {
+        _popupAfterDelay = true;
+        StartCoroutine(CountDown(delay));
+    }
+
+    private IEnumerator CountDown(float countDown)
+    {
+        while (countDown > 0)
+        {
+            yield return new WaitForSeconds(1);
+            countDown--;
+        }
+
+        if (_popupAfterDelay)
+        {
+            _popupAfterDelay = false;
+            OpenPopupMenu(MenuLogic.MenuState.Pause);
         }
     }
 }
