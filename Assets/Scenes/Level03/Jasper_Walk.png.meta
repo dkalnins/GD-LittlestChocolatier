@@ -1,0 +1,763 @@
+fileFormatVersion: 2
+guid: 43036baf3e54b7046affa26728aaf976
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jasper_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2001.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fdf83fd26f9a19459b5b4dff1b31fd9
+      internalID: -1203175834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 2001.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0548c1b3da061724a97e906f167696aa
+      internalID: -152366522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 2001.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a61f7c54409d4c4887cd69d3263e41c
+      internalID: -1600138699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 2001.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa7abe5db170224fa20d8b50b193410
+      internalID: -123675325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 2001.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06df51b28338ef4cb574ccddb1b0f83
+      internalID: 586335788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1601.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f1302d1f542bd48850b51d0c3a5a84
+      internalID: -2113064185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 1601.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb94fdca41934c3489fb01800654985c
+      internalID: 1044727399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 1601.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf00435366ef124093167e10369985b
+      internalID: 347837581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_8
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 1601.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd0edacc1789d51458dc3dbbe44b77ef
+      internalID: -1241449091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_9
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 1601.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8ef429ad295dc488b1696dcb21d10e
+      internalID: 1809505814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1201.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7612c57226a1190439a3d2821b1f93d2
+      internalID: 680318895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_11
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 1201.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496f9818447fc1b4fa2f4800df42d09e
+      internalID: 363977694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_12
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 1201.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2bb7d4761ab2124d820d3180c606e7c
+      internalID: 371458089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_13
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 1201.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c005e45c7856a64cb81fb170b8cf658
+      internalID: -1871033356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_14
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 1201.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc2d3a5ca213d9747ab1b1c0bdd9ab82
+      internalID: -635313698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 801.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d235693167b6c64a8ae2ebb40754cb9
+      internalID: 750516610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_16
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 801.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 712f87a30836c4b438d4c42c05fe5157
+      internalID: -1533207956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_17
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 801.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830061163cdf34745bdd067d3f227ccc
+      internalID: 122668945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_18
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 801.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07eb2db1797e6934d9e0287e7de83e1e
+      internalID: -1569164167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_19
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 801.6666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97dac49acc83c642be332c8e4d774bc
+      internalID: 1854718552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 401.66666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca51292be44bbf449f28778b714d87a
+      internalID: -843691003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_21
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 401.66666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01172733dc856714cbb4bbcbfccd318b
+      internalID: 1715023310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_22
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 401.66666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6edfaa095d40b264d89ae41b772cd8f5
+      internalID: 18943485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_23
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 401.66666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eadfba6cdbbd4e4b97d9f4a51546a12
+      internalID: 474289124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_24
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 401.66666
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d78626e3aa79743afc574b7331f95e
+      internalID: 160722308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.6666565
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292fc01cb036c9d4e9380fbc5ec27851
+      internalID: -849320398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_26
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 1.6666565
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e57691aff2dbe45b6dfe53916c56c1
+      internalID: -1770930210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Walk_27
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 1.6666565
+        width: 401.6
+        height: 400.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c6fd284423a6d4e95efeb479257f01
+      internalID: -1683215105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Jasper_Walk_0: -1203175834
+      Jasper_Walk_1: -152366522
+      Jasper_Walk_10: 680318895
+      Jasper_Walk_11: 363977694
+      Jasper_Walk_12: 371458089
+      Jasper_Walk_13: -1871033356
+      Jasper_Walk_14: -635313698
+      Jasper_Walk_15: 750516610
+      Jasper_Walk_16: -1533207956
+      Jasper_Walk_17: 122668945
+      Jasper_Walk_18: -1569164167
+      Jasper_Walk_19: 1854718552
+      Jasper_Walk_2: -1600138699
+      Jasper_Walk_20: -843691003
+      Jasper_Walk_21: 1715023310
+      Jasper_Walk_22: 18943485
+      Jasper_Walk_23: 474289124
+      Jasper_Walk_24: 160722308
+      Jasper_Walk_25: -849320398
+      Jasper_Walk_26: -1770930210
+      Jasper_Walk_27: -1683215105
+      Jasper_Walk_3: -123675325
+      Jasper_Walk_4: 586335788
+      Jasper_Walk_5: -2113064185
+      Jasper_Walk_6: 1044727399
+      Jasper_Walk_7: 347837581
+      Jasper_Walk_8: -1241449091
+      Jasper_Walk_9: 1809505814
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
