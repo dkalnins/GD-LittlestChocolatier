@@ -16,8 +16,10 @@ public class GlobalGameState : MonoBehaviour
 
     private bool _isPlayerVanquished = false;
     private int _currentLevel = 1;
-    private int _lastLevel = 4;
+    //private int _lastLevel = 4;
+    private int _lastLevel = 1; // updated in Awake() below
 
+    
     // Code to instantiate Singleton.
     private static GlobalGameState _instance;
     public static GlobalGameState Instance
@@ -40,6 +42,8 @@ public class GlobalGameState : MonoBehaviour
             Destroy(_instance);
         else
             _instance = this;
+
+        _instance._lastLevel = SceneManager.sceneCountInBuildSettings - 1;
     }
 
     private void Update()
