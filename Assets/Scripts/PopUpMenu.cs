@@ -137,6 +137,7 @@ public class PopUpMenu : MonoBehaviour
         if (_popupAfterDelay)
         {
             _popupAfterDelay = false;
+            Cursor.visible = true;
             OpenPopupMenu(MenuLogic.MenuState.Vanquished);
         }
     }

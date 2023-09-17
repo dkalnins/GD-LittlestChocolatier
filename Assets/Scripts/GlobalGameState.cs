@@ -63,15 +63,18 @@ public class GlobalGameState : MonoBehaviour
     public void StartGame()
     {
         _currentLevel = 1;
+        Cursor.visible = false;
         SceneManager.LoadScene(1);
     }
     public void ResumeGame()
     {
+        Cursor.visible = false;
         StartTime();
     }
 
     public void ResetAndStartGame()
     {
+        Cursor.visible = false;
         _isPlayerVanquished = false;
         StartTime();
         StartGame();
@@ -79,6 +82,7 @@ public class GlobalGameState : MonoBehaviour
 
     public void NextLevel()
     {
+        Cursor.visible = false;
         _currentLevel++;
         if (_currentLevel > _lastLevel)
         {
@@ -86,6 +90,7 @@ public class GlobalGameState : MonoBehaviour
         }
         else
         {
+            Cursor.visible = false;
             SceneManager.LoadScene(_currentLevel);
         }
     }
@@ -109,6 +114,7 @@ public class GlobalGameState : MonoBehaviour
 
     private void OpenPopupMenu(MenuLogic.MenuState menuType)
     {
+        Cursor.visible = true;
         StopTime();
         PopUpMenu.Instance.OpenPopupMenu(menuType);
     }
