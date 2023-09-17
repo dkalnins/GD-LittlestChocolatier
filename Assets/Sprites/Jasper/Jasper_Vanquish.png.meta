@@ -1,0 +1,651 @@
+fileFormatVersion: 2
+guid: 5b7ac603f79da504d8c22b0522b29271
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jasper_Vanquish_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2006.6666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66d6a662c7d72140a8fc2b0046ea6eb
+      internalID: 2097358272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_1
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 2006.6666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3c3badc6277d44293141da35932975
+      internalID: 1926493830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_2
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 2006.6666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235e7115bc14e984094d1f62dcb85bc0
+      internalID: 832113908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_3
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 2006.6666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f796602411b846244a0e8633840de347
+      internalID: -1666371570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1605.6666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90516d97685119940831784515704de1
+      internalID: 1595437114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_5
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 1605.6666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0415544dc80b31a4db89fbac90a7b66f
+      internalID: -2105607452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_6
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 1605.6666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2534490f7bbe00549a24d476d79a23be
+      internalID: 1578705389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_7
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 1605.6666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62637004fb433134397ef2a9e0f61a29
+      internalID: 800281784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1204.6666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4bd8a0377cf02f49b599ae52ae5baa1
+      internalID: -1580536118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_9
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 1204.6666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95adff6ff903d2b45912626ecb34f547
+      internalID: -946356569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_10
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 1204.6666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55afc931f5311484b86e69a81a2e13aa
+      internalID: -2144697416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_11
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 1204.6666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc148e7b9cf36b45bf3b7829badc5c0
+      internalID: -861211738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 803.6666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 785d50aa34eaaa84a8cdc5cd5825bc4f
+      internalID: -1894195313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_13
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 803.6666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01b7a03a26873a4ea928fcd474ce5df
+      internalID: -336308690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_14
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 803.6666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd33d508539befd48aa3e42c37d32f10
+      internalID: 1629826938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_15
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 803.6666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626f45238a37b364996c7dca2771872f
+      internalID: -1140692007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 402.66666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c531367690890479247686b213dd3d
+      internalID: 1187840121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_17
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 402.66666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d83f73f98771848a5bb3f142c7dd44
+      internalID: 1101409260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_18
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 402.66666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a0108173c47b44d8c9c21b5c0137a3
+      internalID: 2137107591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_19
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 402.66666
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ab3b297a678574584fbd8f4d4801b4
+      internalID: -1432661265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.6666565
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1a296daca8d844298830d2dd720143
+      internalID: -2044760772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_21
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 1.6666565
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 550ae07f0be91ba4d9a59a87ad2745e0
+      internalID: 16881642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_22
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 1.6666565
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f861f481bf5694ea2a5b955c8689f9
+      internalID: 861410696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jasper_Vanquish_23
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 1.6666565
+        width: 401.5
+        height: 401.33334
+      alignment: 9
+      pivot: {x: 0.6572327, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cafb39626a68a7c43bb338034264fcc1
+      internalID: 616074953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Jasper_Vanquish_0: 2097358272
+      Jasper_Vanquish_1: 1926493830
+      Jasper_Vanquish_10: -2144697416
+      Jasper_Vanquish_11: -861211738
+      Jasper_Vanquish_12: -1894195313
+      Jasper_Vanquish_13: -336308690
+      Jasper_Vanquish_14: 1629826938
+      Jasper_Vanquish_15: -1140692007
+      Jasper_Vanquish_16: 1187840121
+      Jasper_Vanquish_17: 1101409260
+      Jasper_Vanquish_18: 2137107591
+      Jasper_Vanquish_19: -1432661265
+      Jasper_Vanquish_2: 832113908
+      Jasper_Vanquish_20: -2044760772
+      Jasper_Vanquish_21: 16881642
+      Jasper_Vanquish_22: 861410696
+      Jasper_Vanquish_23: 616074953
+      Jasper_Vanquish_3: -1666371570
+      Jasper_Vanquish_4: 1595437114
+      Jasper_Vanquish_5: -2105607452
+      Jasper_Vanquish_6: 1578705389
+      Jasper_Vanquish_7: 800281784
+      Jasper_Vanquish_8: -1580536118
+      Jasper_Vanquish_9: -946356569
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
